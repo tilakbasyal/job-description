@@ -10,12 +10,11 @@ const styles = theme => ({
   card: {
     position: 'relative', 
     zIndex : 1,
-    // display: 'flex',
+    marginBottom : 40,
   },
   paper: {
     width: 90 + `%`,
     marginTop: 0,
-    // marginBottom: 2 + `em`,
     marginLeft: `auto`,
     marginRight: `auto`,
 
@@ -51,7 +50,6 @@ const styles = theme => ({
  cardcontentForRight : {
   paddingTop : 1+`rem`,
   paddingLeft : 1.5+`rem`,
-  // backgroundColor : `#fafafa`,
   margin: 0,
 },
  gridlists : {
@@ -88,7 +86,6 @@ class Header extends Component {
 
         </AppBar>
 
-
         <Paper className={classes.paper}>
           <Card className = {classes.card}>
             <CardMedia
@@ -103,8 +100,6 @@ class Header extends Component {
               </div>
            
             </CardMedia>
-
-
             <CardContent className = {classes.zeropadding}  >
               <Grid container>
                 <Grid item xs={12} md={3} className = {classes.cardcontentForLeft} >
@@ -123,7 +118,46 @@ class Header extends Component {
                   <Typography variant="body2" gutterBottom>Apply Instrutions:</Typography>
                   <Typography gutterBottom>Eligible candidates can send their C.V. at: something@whatever.com</Typography> 
                   <Typography >OR</Typography>
-                  <Button variant="contained" color="primary" >Apply Now</Button>
+                  <Button variant="contained" color="primary" className = {classes.spacebelow} >Apply Now</Button>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Paper>
+
+        <Paper className={classes.paper}>
+          <Card className = {classes.card}>
+            <CardMedia
+              className={classes.media}
+              image={image}
+              title="Random Photography"
+            >
+             <div className = {classes.imageOverlay} >              
+            </div>
+            <div className={classes.overlay}>
+                  <h1>Job Title</h1>
+              </div>
+           
+            </CardMedia>
+            <CardContent className = {classes.zeropadding}  >
+              <Grid container>
+                <Grid item xs={12} md={3} className = {classes.cardcontentForLeft} >
+                  <Typography className= {classes.spacebelow} gutterBottom  >Category:  Fulltime</Typography>
+                  <Typography className= {classes.spacebelow} gutterBottom  >Location: 
+                   <Chip href="#chip" clickable label="Kathmandu" />
+                    </Typography>
+                  <Typography className= {classes.spacebelow} gutterBottom  >Salary:  10,000-15,000</Typography>
+                  <Typography className= {classes.spacebelow} gutterBottom  >Nature: Fulltime</Typography>
+                  <Typography className= {classes.spacebelow} gutterBottom  >Deadine:  20 December 2018</Typography>
+                </Grid>
+
+                <Grid xs={12} md={9}  className = {classes.cardcontentForRight} >
+                  <Typography  variant="body2" gutterBottom>Job Description:</Typography>
+                  <Typography  className= {classes.spacebelow}>We are looking for a self-motivated Business Administrator with strong leadership skills and a thorough understanding of business operations to facilitate and optimize our business processes. The Business Administrator’s duties will include overseeing and analyzing financial operations, approving purchases and expenditure, mediating between staff and other executives, appointing heads of departments, marketing and promoting the business, and facilitating training programs. </Typography>
+                  <Typography variant="body2" gutterBottom>Apply Instrutions:</Typography>
+                  <Typography gutterBottom>Eligible candidates can send their C.V. at: something@whatever.com</Typography> 
+                  <Typography >OR</Typography>
+                  <Button variant="contained" color="primary"  className = {classes.spacebelow}>Apply Now</Button>
                 </Grid>
               </Grid>
             </CardContent>
