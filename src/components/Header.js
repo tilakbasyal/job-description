@@ -116,7 +116,7 @@ class Header extends Component {
             <Typography variant="headline" gutterBottom>Deadine:  20 December 2018</Typography>         
           </Grid>
 
-          <Grid xs={12} md={9} className={classes.rightPart}>
+          <Grid item xs={12} md={9} className={classes.rightPart}>
             {/* <Card className={classes.rightPart}> */}
               <Typography variant="headline" gutterBottom>Job Description:</Typography>
               <Typography variant="subheading" gutterBottom>We are looking for a self-motivated Business Administrator with strong leadership skills and a thorough understanding of business operations to facilitate and optimize our business processes. The Business Administrator’s duties will include overseeing and analyzing financial operations, approving purchases and expenditure, mediating between staff and other executives, appointing heads of departments, marketing and promoting the business, and facilitating training programs. </Typography>
